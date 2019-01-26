@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../Navbar/Navbar";
 
 class Exercise extends Component {
-
+ 
     constructor(props) {
         super(props)
         this.state = {
@@ -11,7 +11,8 @@ class Exercise extends Component {
             time: null,
             calories: null,
             converted:null,
-           counterType: null
+           counterType: null,
+           currentPage: "Health-Exercise"
         }
     //    this.addOne = this.addOne.bind(this)
        this.end=this.end.bind(this)
