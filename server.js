@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(express.static(path.join(__dirname, "client", "public")))
 // Use apiRoutes
 app.use("/api", apiRoutes);
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/insync";
 mongoose.connect(MONGODB_URI,{ useNewUrlParser: true});
 
 // Send every request to the React app
