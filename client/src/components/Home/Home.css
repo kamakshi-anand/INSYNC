@@ -1,0 +1,44 @@
+.nav-item{
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.link{
+  color:red;
+}
+.blinking{
+animation:blinkingText 2.5s infinite;
+}
+@keyframes blinkingText{
+0%{     color:darkgreen;    }
+49%{    color: transparent; }
+50%{    color: transparent; }
+99%{    color:transparent;  }
+100%{   color: darkgreen;    }
+}
+body{
+background-color: aqua;
+}
+.card-header{
+font-family: cursive;
+font-size: 20px;
+}
+h1{
+text-align: center;
+color: blue;
+font-family: fantasy;
+
+}
+.lead{
+text-align: center;
+color: blue;
+font-family: 'Courier New', Courier, monospace;
+font-size: xx-large;
+}
+.jumbotron{
+background-color:goldenrod;
+}
+
+.clockhome{
+margin-left: 340px;
+}
