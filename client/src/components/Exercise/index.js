@@ -39,7 +39,7 @@ class Exercise extends Component {
             }
         }, 15000);
 
-        
+
     }
 
     startCounter() {
@@ -113,26 +113,26 @@ class Exercise extends Component {
             workoutEnded: false,
         });
         alert("Workout successfully Saved");
-       // alert("Flag is "+ this.state.converted);
+        // alert("Flag is "+ this.state.converted);
     }
 
     end() {
         //  alert("reset");
-       // alert("Flag is "+ this.state.workoutEnded);
+        // alert("Flag is "+ this.state.workoutEnded);
         this.setState({
             workoutEnded: true,
         });
         this.setState({
-           clockRunning: false,
+            clockRunning: false,
         });
         this.setState({
-            counterType: "end" 
+            counterType: "end"
         });
 
         clearInterval(this.interval);
         clearInterval(this.interval1);
-     //   alert("Flag is "+ this.state.workoutEnded);
-        alert("Flag is "+ this.state.workoutEnded);
+        //   alert("Flag is "+ this.state.workoutEnded);
+        alert("Flag is " + this.state.workoutEnded);
 
     }
 
@@ -154,12 +154,6 @@ class Exercise extends Component {
                             <div className="card border-primary time mb-3 timeElapsed">
                                 <div className="card-header">
                                     <div className="row">
-                                        <div className="col-sm-4">
-                                            <button className="btn btn-primary" id="btn-start" onClick={this.startCounter}>Start
-                                                    </button>
-                                        </div>
-                                        {/* <button onClick={() => this.setState({counter:'simplest'})}  >Simplest</button> */}
-
 
 
                                         {this.state.workoutEnded === true ? (
@@ -167,9 +161,16 @@ class Exercise extends Component {
                                                 <button className="btn btn-success" id="btn-save" onClick={() => { this.save() }}> Save</button>
                                             </div>
                                         ) : (
+                                            <React.Fragment>
+                                                <div className="col-sm-4">
+                                                    <button className="btn btn-primary" id="btn-start" onClick={this.startCounter}>Start
+                                                    </button>
+                                                </div>
+
                                                 <div className="col-sm-4">
                                                     <button className="btn btn-danger" id="btn-end" onClick={this.end}> End</button>
                                                 </div>
+                                                </React.Fragment>
                                             )}
 
                                     </div>
