@@ -13,7 +13,8 @@ class Exercise extends Component {
             calories: null,
             converted: null,
             counterType: null,
-            currentPage: "Health-Exercise"
+            currentPage: "Health-Exercise",
+            workoutEnded: false
         }
         //    this.addOne = this.addOne.bind(this)
         this.end = this.end.bind(this)
@@ -21,7 +22,7 @@ class Exercise extends Component {
         this.count = this.count.bind(this)
         this.calCount = this.calCount.bind(this)
         this.startCounter = this.startCounter.bind(this)
-
+        this.save = this.save.bind(this)
     }
 
     componentDidMount() {
@@ -37,6 +38,8 @@ class Exercise extends Component {
                 this.calCount();
             }
         }, 15000);
+
+        
     }
 
     startCounter() {
@@ -82,46 +85,56 @@ class Exercise extends Component {
     }
 
     calCount() {
-       // alert("in count");
+        // alert("in count");
         this.setState({
             calories: this.state.calories + 1
         })
     }
 
     save(event) {
-      //    event.preventDefault();
-       // alert("I am in ");
-         // if (this.state.calories && this.state.time) {
-              API.addWorkout({
-                  calories: this.state.calories,
-                  totaltime: this.state.converted,
-                 // synopsis: this.state.synopsis
-              })
-                  //.then(res => this.loadBooks())
-                  .catch(err => console.log(err));
-         // }
-      }
+        //    event.preventDefault();
+        // alert("I am in ");
+        // if (this.state.calories && this.state.time) {
+        API.addWorkout({
+            calories: this.state.calories,
+            totaltime: this.state.converted,
+            // synopsis: this.state.synopsis
+        })
+            //.then(res => this.loadBooks())
+            .catch(err => console.log(err));
+        // }
+        this.setState({
+            calories: 0,
+        });
+        this.setState({
+            converted: "00:00",
+        });
+        this.setState({
+            workoutEnded: false,
+        });
+        alert("Workout successfully Saved");
+       // alert("Flag is "+ this.state.converted);
+    }
 
     end() {
         //  alert("reset");
+       // alert("Flag is "+ this.state.workoutEnded);
         this.setState({
-            // counterType:null,  
-            // time:0,
-            // converted:'00:00',
-            clockRunning: false,
-            counterType: "end"
-            //  calories:0
+            workoutEnded: true,
+        });
+        this.setState({
+           clockRunning: false,
+        });
+        this.setState({
+            counterType: "end" 
+        });
 
-        })
         clearInterval(this.interval);
         clearInterval(this.interval1);
+     //   alert("Flag is "+ this.state.workoutEnded);
+        alert("Flag is "+ this.state.workoutEnded);
 
     }
-
-    
-    
-
-
 
     render() {
         return (
@@ -146,12 +159,19 @@ class Exercise extends Component {
                                                     </button>
                                         </div>
                                         {/* <button onClick={() => this.setState({counter:'simplest'})}  >Simplest</button> */}
-                                        <div className="col-sm-4">
-                                            <button className="btn btn-danger" id="btn-end" onClick={this.end}> End</button>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <button className="btn btn-success" id="btn-save" onClick={() => {this.save()}}> Save</button>
-                                        </div>
+
+
+
+                                        {this.state.workoutEnded === true ? (
+                                            <div className="col-sm-4">
+                                                <button className="btn btn-success" id="btn-save" onClick={() => { this.save() }}> Save</button>
+                                            </div>
+                                        ) : (
+                                                <div className="col-sm-4">
+                                                    <button className="btn btn-danger" id="btn-end" onClick={this.end}> End</button>
+                                                </div>
+                                            )}
+
                                     </div>
                                 </div>
                                 <div className="card-body text-primary">
