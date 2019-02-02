@@ -108,6 +108,7 @@ class Exercise extends Component {
         });
         this.setState({
             converted: "00:00",
+            time:0
         });
         this.setState({
             workoutEnded: false,
