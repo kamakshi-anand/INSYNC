@@ -23,7 +23,7 @@ mongoose.connect(MONGODB_URI,{ useNewUrlParser: true});
 // Define any API routes before this runs
 
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "client", "index.html"));
+  res.sendFile(path.join("client", "index.html"));
 });
 
 
