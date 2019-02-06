@@ -26,6 +26,7 @@ const workoutController = require("../controllers/workoutController");
 
 router.route("/workouts") 
   .get(workoutController.findAll);
+  console.log("i am in api routes");
 
 router.route("/workouts") 
   .post(workoutController.create)

@@ -9,3 +9,7 @@
   align-content: flex-start;
   overflow: auto;
 }
+
+.heading {
+  text-align: center;
+}

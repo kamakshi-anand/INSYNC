@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+//import { Link } from "react-router-dom";
 //import clock from "./images/clock-text.png";
 import "./Navbar.css";
+//require("react-bootstrap/ModalHeader");
+
 
 function Navbar(props) {
     return (
@@ -14,7 +17,7 @@ function Navbar(props) {
             <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/">Home <span className="sr-only"></span></a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href=".\leisure.html">Leisure</a>
@@ -27,8 +30,10 @@ function Navbar(props) {
                     </li>
                 </ul>
                 <span className="navbar-text">
-
+                <button type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#vitalModal">Vitals<i
+                        className="fa fa-heart"></i></button>
                 </span>
+                
             </div>
         </nav>
         
@@ -40,3 +45,52 @@ function Navbar(props) {
 
 
 export default Navbar;
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+// function Navbar() {
+//   return (
+//     <ul className="nav nav-tabs">
+//       <li className="nav-item">
+//         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+//           Home
+//         </Link>
+//       </li>
+//       <li className="nav-item">
+//         <Link
+//           to="/exercise"
+//           className={window.location.pathname === "/exercise" ? "nav-link active" : "nav-link"}
+//         >
+//           Health and Exercise
+//         </Link>
+//       </li>
+//       <li className="nav-item">
+//         <Link
+//           to="/leisure"
+//           className={window.location.pathname === "/leisure" ? "nav-link active" : "nav-link"}
+//         >
+//           Leisure
+//         </Link>
+//       </li>
+//       <li className="nav-item">
+//         <Link
+//           to="/chat"
+//           className={window.location.pathname === "/chat" ? "nav-link active" : "nav-link"}
+//         >
+//           Chat
+//         </Link>
+//       </li>
+//       {/* <li className="nav-item">
+//         <Link
+//           to="/learn"
+//           className={window.location.pathname === "/learn" ? "nav-link active" : "nav-link"}
+//         >
+//           Learn
+//         </Link>
+//       </li> */}
+//     </ul>
+//   );
+// }
+
+// export default Navbar;
