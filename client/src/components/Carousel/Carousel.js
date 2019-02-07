@@ -12,7 +12,7 @@ import image3 from "./images/family.jpg";
 const CarouselPage = () => {
   return (
     <MDBContainer>
-      <h4 className="mt-5 mb-2">Basic example</h4>
+      <h4 className="mt-5 mb-2">Family Moments</h4>
       <MDBCarousel activeItem={1} length={4} showControls={true} showIndicators={true} className="z-depth-1">
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">

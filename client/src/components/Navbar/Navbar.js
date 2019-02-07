@@ -20,13 +20,13 @@ function Navbar(props) {
                         <a className="nav-link" href="/">Home <span className="sr-only"></span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href=".\leisure.html">Leisure</a>
+                        <a className="nav-link" href=".\leisure">Leisure</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href=".\health-exercise.html">Health-Exercise</a>
+                        <a className="nav-link" href=".\exercise">Health-Exercise</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href=".\chat.html">Chat</a>
+                        <a className="nav-link" href=".\chat">Chat</a>
                     </li>
                 </ul>
                 <span className="navbar-text">

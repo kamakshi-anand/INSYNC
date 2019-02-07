@@ -283,7 +283,7 @@ class Exercise extends Component {
                     </div>
 
                     <br></br>
-                    <h4>Saved workouts:</h4>
+                    <h4>Workout History:</h4>
                     <div className="row">
                         <div className="col-md-4">
                             {/* <div className="card-body text-primary"> */}
