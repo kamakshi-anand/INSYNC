@@ -6,87 +6,76 @@ import Navbar from "../Navbar/Navbar";
 import cartoon from "./images/cartoonfamily.png";
 import family from "./images/family.jpg";
 import withson from "./images/withson.jpg";
+//import Carousel from 'react-bootstrap/Carousel';
+import CarouselPage from "../Carosel/Carousel"
 
 class Leisure extends Component {
     render() {
         return (
             <React.Fragment>
                 <Navbar></Navbar>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-4"></div>
+                <div className="row">
+                    <div className="col-md-4">
                         {/* style="max-width: 18rem; */}
+                        <div class="card border-primary mb-3">
+                            <CarouselPage></CarouselPage>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
                         <div className="card border-primary mb-3">
-                            <div className="card-header blinking home"><b>What's happening @Home :-)</b></div>
+                            <div className="card-header blinking chessGame"><b>Chess Game</b></div>
                             <div className="card-body text-primary">
 
-                                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                                    <ol className="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                    </ol>
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <img className="d-block w-100" src={cartoon} alt="First slide"/>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src={family} alt="Second slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src={withson} alt="Third slide" />
-                                        </div>
-                                    </div>
-                                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
-                                        onclick="$('#myCarousel').carousel('prev')"></a>
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="sr-only">Previous</span>
+                                <iframe src='https://chess-db.com/tactics/embedtactics.jsp' scrolling='no' width='220' height='270'
+                                    frameborder='0'></iframe>
+                                <div id="comments">
+                                    <p>Rishi says: Hi Dad</p>
 
-                                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"
-                                        onclick="$('#myCarousel').carousel('next')">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Next</span>
-                                    </a>
+                                    <p>Dad says: Your turn!!!</p>
+
+                                    <p>Rishi Says: How about that?</p>
+
                                 </div>
-                                <p className="card-text">Hey dad, look what we made for dinner!!!!</p>
-                                <div id="carouselExampleIndicators1" className="carousel slide" data-ride="carousel">
-                                    <ol className="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="0" className="active"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-                                    </ol>
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <img className="d-block w-100" src="images/activity1.jpg" alt="First slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src="images/activity2.jpg" alt="Second slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src="images/activity3.jpg" alt="Third slide" />
-                                        </div>
-                                    </div>
-                                    <a className="carousel-control-prev" href="#carouselExampleIndicators1" role="button"
-                                        data-slide="prev" onclick="$('#myCarousel').carousel('prev')"></a>
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="sr-only">Previous</span>
-
-                                    <a className="carousel-control-next" href="#carouselExampleIndicators1" role="button"
-                                        data-slide="next" onclick="$('#myCarousel').carousel('next')">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Next</span>
-                                    </a>
-                                </div>
-                                <p className="card-text">Hey dad, we ran around the park!!!!</p>
-
-
-
+                                <label for="comment">Comment:</label>
+                                <input type="text " className="form-control " id="comment" />
+                                <button class="btn-go btn-primary">Go</button>
 
                             </div>
                         </div>
                     </div>
+                    <div className="col-md-4">
+                        <div className="card border-primary mb-3">
+                            <div class="card-header blinking worldNews"><b>Family Blog</b></div>
+                            <div class="card-body text-primary">
+                                <ul>
+                                    <li>Sunday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                    <li>Monday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                    <li>Tuesday</li>
+                                    <ul><a href="#" class="blog"><b>Recipe of the day</b></a></ul>
+                                    <li>Wednesday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                    <li>Thursday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                    <li>Friday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                    <li>Saturday</li>
+                                    <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                </ul>
+                              
+        
+        
+        
+        
+                    </div>
+                        </div>
+                    </div>
                 </div>
-              
+
+
+
+
             </React.Fragment >
         );
     }

@@ -22,7 +22,7 @@ module.exports = {
     console.log(" I am in Controller FindAll"+req.query);
     db.Workout
       .find(req.query)
-      .sort({ date: -1 })
+      .sort({ date: 'descending' })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

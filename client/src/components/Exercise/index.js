@@ -18,6 +18,8 @@ class Exercise extends Component {
             counterType: null,
             currentPage: "Health-Exercise",
             workoutEnded: false,
+            today: null,
+            formattedDate: null,
             workouts: []
         }
         //    this.addOne = this.addOne.bind(this)
@@ -28,6 +30,8 @@ class Exercise extends Component {
         this.startCounter = this.startCounter.bind(this)
         this.save = this.save.bind(this)
         this.loadWorkouts = this.loadWorkouts.bind(this)
+        //   this.getToday = this.getToday.bind(this)
+        this.formatDate = this.formatDate.bind(this)
     }
 
     loadWorkouts() {
@@ -53,6 +57,7 @@ class Exercise extends Component {
         }, 15000);
         //*************************************** */
         this.loadWorkouts();
+        //   this.getToday();
     }
 
 
@@ -95,6 +100,54 @@ class Exercise extends Component {
         return minutes + ":" + seconds;
     }
 
+    // getToday() {
+    //     var today = new Date();
+    //     var dd = today.getDate();
+    //     var mm = today.getMonth() + 1; //January is 0!
+    //     var yyyy = today.getFullYear();
+    //     //   alert(today);
+
+    //     if (dd < 10) {
+    //         dd = '0' + dd;
+    //     }
+
+    //     if (mm < 10) {
+    //         mm = '0' + mm;
+    //     }
+
+    //     today = mm + '/' + dd + '/' + yyyy;
+    //     //alert(today);
+    //     this.setState({ today: today });
+    // }
+
+    formatDate(inputDate) {
+
+        var savedDate = new Date(inputDate.date);
+
+        var dd = savedDate.getDate();
+        var mm = savedDate.getMonth() + 1; //January is 0!
+        // alert("date is " + dd);
+        var yyyy = savedDate.getFullYear();
+        //   alert(today);
+
+        // if (inputDate < 10) {
+        //     inputDate = '0' + inputDate;
+        // }
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        savedDate = mm + '/' + dd + '/' + yyyy;
+        //alert(today);
+        return savedDate;
+        //  this.setState({ formattedDate: savedDate });
+    }
+
     count() {
 
         this.setState({ time: this.state.time + 1 });
@@ -115,6 +168,7 @@ class Exercise extends Component {
         API.addWorkout({
             calories: this.state.calories,
             totaltime: this.state.converted,
+         //   date: this.state.today
             // synopsis: this.state.synopsis
         })
             //.then(res => this.loadBooks())
@@ -175,8 +229,8 @@ class Exercise extends Component {
                         <div className="col-md-4">
                         </div>
                     </div>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <div className="row">
                         <div className="col-md-4">
                             <div className="card border-primary time mb-3 timeElapsed">
@@ -237,16 +291,19 @@ class Exercise extends Component {
                             {this.state.workouts.length ? (
                                 <table>
                                     <tr>
-                                        <th className="heading">Calories</th>&nbsp;
-                                        <th className="heading">Time </th>&nbsp;
+                                        <th className="heading">Calories Burnt</th>&nbsp;
+                                        <th className="heading">Total Time </th>&nbsp;
                                         <th className="heading">Date</th>&nbsp;
                                     </tr>
                                     {/* <List> */}
                                     {this.state.workouts.map(workout => (
                                         <tr>
                                             <td>{workout.calories}</td>     &nbsp;
-                                        <td>{workout.totaltime}</td>    &nbsp;
-                                        <td>{workout.date}}</td>     &nbsp;
+                                        {/* {this.renderDate({workout.totaltime})} */}
+                                            {/* { this.formatDate(workout)} */}
+                                            {/* {this.formatDate({workout.totaltime})} */}
+                                            <td>{workout.totaltime}</td>    &nbsp;
+                                        <td>   {this.formatDate(workout)}</td>     &nbsp;
                                     </tr>
 
 
