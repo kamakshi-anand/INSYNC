@@ -7,12 +7,14 @@ import cartoon from "./images/cartoonfamily.png";
 import family from "./images/family.jpg";
 import withson from "./images/withson.jpg";
 //import Carousel from 'react-bootstrap/Carousel';
-import CarouselPage from "../Carousel/Carousel"
+import CarouselPage from "../Carousel/Carousel";
+//import ModalPage from "../Modal/index";
+
 
 class Leisure extends Component {
     state = {
         currentPage: "Leisure",
-        hanuman:"God"
+        
     };
 
     render() {
@@ -27,6 +29,7 @@ class Leisure extends Component {
                             {/* style="max-width: 18rem; */}
                             <div class="card border-primary mb-3">
                                 <CarouselPage></CarouselPage>
+                                
                             </div>
                         </div>
                         <div className="col-md-4">
@@ -57,7 +60,8 @@ class Leisure extends Component {
                                 <div class="card-body text-primary">
                                     <ul>
                                         <li>Sunday</li>
-                                        <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
+                                        {/* <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul> */}
+                                        <ul><a href="https://docs.google.com/document/d/12UElI2nIPzj6J1eJKDbtdPk6x75TQ43dASTDX66jh74/edit?usp=sharing" target="_blank" class="blog" ><b>Blog of the day</b></a></ul>
                                         <li>Monday</li>
                                         <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
                                         <li>Tuesday</li>
@@ -71,10 +75,6 @@ class Leisure extends Component {
                                         <li>Saturday</li>
                                         <ul><a href="#" class="blog"><b>Blog of the day</b></a></ul>
                                     </ul>
-
-
-
-
 
                                 </div>
                             </div>

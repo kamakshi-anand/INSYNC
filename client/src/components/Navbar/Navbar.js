@@ -3,12 +3,13 @@ import React, { Component } from "react";
 //import clock from "./images/clock-text.png";
 import "./Navbar.css";
 //require("react-bootstrap/ModalHeader");
+import ModalPage from "../Modal/index";
 
 
 function Navbar(props) {
     return (
         
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-sm  navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
             <a className="navbar-brand" href="#">{props.currentPage}</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -19,20 +20,28 @@ function Navbar(props) {
                     <li className="nav-item active">
                         <a className="nav-link" href="/">Home <span className="sr-only"></span></a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href=".\leisure">Leisure</a>
-                    </li>
+                    
                     <li className="nav-item">
                         <a className="nav-link" href=".\exercise">Health-Exercise</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href=".\leisure">Leisure</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href=".\chat">Chat</a>
                     </li>
                 </ul>
+                {props.currentPage==="Health-Exercise" ? (
                 <span className="navbar-text">
-                <button type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#vitalModal">Vitals<i
-                        className="fa fa-heart"></i></button>
+                {/* <button type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#vitalModal">Vitals<i
+                        className="fa fa-heart"></i></button> */}
+                        <React.Fragment>
+                        <ModalPage> </ModalPage>
+                       </React.Fragment>
                 </span>
+                ):(
+<div></div>
+                )}
                 
             </div>
         </nav>

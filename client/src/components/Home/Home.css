@@ -16,8 +16,12 @@ animation:blinkingText 2.5s infinite;
 99%{    color:transparent;  }
 100%{   color: darkgreen;    }
 }
+
+
 body{
-background-color: aqua;
+  background-image: url("./images/space-backgrounds-1.jpg");
+  /* background-image: url("./images/space2.jpg"); */
+
 }
 
 .card-header{
@@ -26,20 +30,45 @@ font-size: 20px;
 }
 h1{
 text-align: center;
-color: blue;
-font-family: fantasy;
+color:wheat;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 .lead{
 text-align: center;
-color: blue;
+color:wheat;
 font-family: 'Courier New', Courier, monospace;
+/* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 font-size: xx-large;
-}
-.jumbotron{
-background-color:goldenrod;
+
+
 }
 
-.clockhome{
-margin-left: 340px;
+.headerHold {
+
+  height: 8vh;
+  margin-bottom: 10vh;
 }
+.header {
+
+  font-family: mapleOrigins;
+  /* font-weight: bold; */
+  font-size: 15vh;
+  color: white;
+  text-align: center;
+  animation: bounce .7s infinite;
+}
+@keyframes bounce {
+  0%   {font-size: 15vh}
+  50%  {font-size: 16vh}
+  100% {font-size: 15vh}
+}
+/* .jumbotron{
+background-color:goldenrod;
+} */
+
+.clockhome{
+margin-left: 320px;
+}
+
+

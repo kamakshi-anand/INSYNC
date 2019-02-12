@@ -4,9 +4,10 @@ import React from "react";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
 
-import image1 from "./images/withson.jpg";
-import image2 from "./images/cartoonfamily.png";
-import image3 from "./images/family.jpg";
+import image1 from "./images/activity2.JPG";
+import image2 from "./images/rishi sad.jpg";
+import image3 from "./images/food3.jpg";
+import image4 from "./images/kids.jpg";
 
 
 const CarouselPage = () => {
@@ -21,8 +22,8 @@ const CarouselPage = () => {
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Light mask</h3>
-              <p>First text</p>
+              <h3 className="h3-responsive">space suit</h3>
+              {/* <p>First text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
@@ -31,8 +32,8 @@ const CarouselPage = () => {
               <MDBMask overlay="black-strong" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
+              <h3 className="h3-responsive">Hectic Day</h3>
+              {/* <p>Second text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
@@ -41,18 +42,18 @@ const CarouselPage = () => {
               <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight mask</h3>
-              <p>Third text</p>
+              <h3 className="h3-responsive">Yummy kofta</h3>
+              {/* <p>Third text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="4">
             <MDBView>
-              <img className="d-block w-100" src={image3} alt="Mattonit's item" />
+              <img className="d-block w-100" src={image4} alt="Mattonit's item" />
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Sopot Beach</h3>
-              <p>Taken june 21th by @mattonit</p>
+              <h3 className="h3-responsive">Ice-cream time</h3>
+              {/* <p>Taken june 21th by @mattonit</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>

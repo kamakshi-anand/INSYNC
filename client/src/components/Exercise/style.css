@@ -13,3 +13,12 @@
 .heading {
   text-align: center;
 }
+.card-body {
+  background-color: antiquewhite;
+}
+.title {
+  color: wheat;
+}
+.text {
+  color:wheat;
+}

@@ -260,7 +260,7 @@ class Exercise extends Component {
                                 {/* include list */}
 
 
-                                <div className="card-body text-primary">
+                                <div className="card-body text-danger">
                                     <h5 className="card-title">Time Elapsed: </h5>
                                     <p className="card-text" id="time">{this.state.converted}</p>
                                     <h5 className="card-title">Calories Burnt:</h5>
@@ -271,7 +271,7 @@ class Exercise extends Component {
                         </div>
 
                         <div className="col-md-8">
-                            <h3>Fun run with your son :-)</h3>
+                            <h3 className="title">Fun run with kids :-)</h3>
                             <div className="embed-responsive embed-responsive-21by9">
                                 <video ref="vidRef" controls width="620" height="240" id="myVideo">
                                     <source src={video} type="video/mp4" autoplay="false" />
@@ -283,27 +283,27 @@ class Exercise extends Component {
                     </div>
 
                     <br></br>
-                    <h4>Workout History:</h4>
+                    <h4 className= "title">Workout History:</h4>
                     <div className="row">
                         <div className="col-md-4">
                             {/* <div className="card-body text-primary"> */}
 
                             {this.state.workouts.length ? (
                                 <table>
-                                    <tr>
+                                    <tr className= "text">
                                         <th className="heading">Calories Burnt</th>&nbsp;
                                         <th className="heading">Total Time </th>&nbsp;
                                         <th className="heading">Date</th>&nbsp;
                                     </tr>
                                     {/* <List> */}
                                     {this.state.workouts.map(workout => (
-                                        <tr>
-                                            <td>{workout.calories}</td>     &nbsp;
+                                        <tr className="text">
+                                            <td>{workout.calories}</td> &nbsp;
                                         {/* {this.renderDate({workout.totaltime})} */}
                                             {/* { this.formatDate(workout)} */}
                                             {/* {this.formatDate({workout.totaltime})} */}
-                                            <td>{workout.totaltime}</td>    &nbsp;
-                                        <td>   {this.formatDate(workout)}</td>     &nbsp;
+                                            <td>{workout.totaltime}</td> &nbsp;
+                                            <td>{this.formatDate(workout)}</td> &nbsp;
                                     </tr>
 
 
@@ -331,42 +331,6 @@ class Exercise extends Component {
 
                     <br />
                     <br />
-                    <div className="modal fade" id="vitalModal" role="dialog">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-
-                                    <h5 className="modal-title">Vitals<i className="fa fa-heart"></i></h5>
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body">
-                                    <p>
-                                        {/* style="max-width: 28rem;" */}
-                                        <div className="card border-primary vitals mb-3" >
-                                            <div className="card-header text-light "><b>Vitals</b></div>
-                                            <div className="card-body text-primary">
-                                                <h5 className="card-title text-muted">Heart Rate / Pulse:</h5>
-
-                                                <p className="card-text blinking text-light">71 BPM</p>
-                                                <h5 className="card-title text-muted">Stress Level:</h5>
-                                                <p className="card-text blinking text-light">Low</p>
-                                                <h5 className="card-title text-muted">Weight:</h5>
-                                                <p className="card-text blinking text-light">150 lbs</p>
-                                                <h5 className="card-title text-muted">Emotion Level:</h5>
-                                                <p className="card-text blinking text-light">Over Excited</p>
-                                            </div>
-                                        </div>
-
-                                    </p>
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" id="vitalclose" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
