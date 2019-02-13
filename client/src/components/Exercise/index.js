@@ -3,7 +3,8 @@ import Navbar from "../Navbar/Navbar";
 import API from "../../utils/API";
 //import { List, ListItem } from "../List";
 import "./style.css";
-import video from "../Exercise/images/20180329_185910.mp4";
+import video from "../Exercise/images/workout1.mp4";
+//import ModalPage from "../Modal/index";
 
 class Exercise extends Component {
 
@@ -225,9 +226,10 @@ class Exercise extends Component {
                     <h1>Let us sweat it out!!!</h1>
                     <br />
                     <div className="row">
+
                         <div className="col-md-8"></div>
-                        <div className="col-md-4">
-                        </div>
+                        <div className="col-md-4"></div>
+                        
                     </div>
                     <br />
                     <br />
@@ -318,12 +320,8 @@ class Exercise extends Component {
                         </div>
 
                         {/* <div className="col-md-8">
-                            <h3>Yoga with friend!!!!</h3>
-                            <div className="embed-responsive embed-responsive-21by9">
-                                <video controls>
-                                    <source src="./images/workout2.mp4" type="video/mp4" autoplay="false" />
-                                </video>
-                            </div>
+                            <h3>Vitals and Nutrition!!!!</h3>
+                            <ModalPage> </ModalPage>
                         </div> */}
                     </div>
 

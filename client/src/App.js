@@ -7,7 +7,7 @@ import Exercise from './components/Exercise/index';
 import Leisure from './components/Leisure/index';
 import Chat from './components/Chat/chat';
 import Goodnight from './components/Goodnight/Goodnight';
-import Login from './components/Login/LoginPage.js';
+// import Login from './components/Login/LoginPage.js';
 
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
           <Route exact path="/leisure" component={Leisure} />
           <Route exact path="/chat" component={Chat} />
           <Route exact path="/goodnight" component={Goodnight} />
-          <Route exact path="/login"  component={Login} />
+          {/* <Route exact path="/login"  component={Login} /> */}
 
 
 

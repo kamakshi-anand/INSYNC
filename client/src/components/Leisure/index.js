@@ -12,10 +12,36 @@ import CarouselPage from "../Carousel/Carousel";
 
 
 class Leisure extends Component {
-    state = {
-        currentPage: "Leisure",
+    // state = {
+    //     currentPage: "Leisure",
         
-    };
+    // };
+    constructor(props) {
+        super(props)
+        this.state = {
+            currentPage: "Leisure",
+            comments: ["Hi Dad", "Hi Son"],
+            comment:""
+
+        }
+        this.updateComment = this.updateComment.bind(this)
+        this.handleInputChange = this.handleInputChange.bind(this)
+    }
+
+    updateComment() {
+        // this.setState({ counterType: 'start' })
+        this.setState({ comments: this.state.comments.concat(this.state.comment) });
+
+    }
+
+    handleInputChange = event => {
+        //   alert("Calling");
+           const { name, value } = event.target;
+           this.setState({
+               [name]: value
+           });
+       };
+
 
     render() {
         return (
@@ -40,16 +66,19 @@ class Leisure extends Component {
                                     <iframe src='https://chess-db.com/tactics/embedtactics.jsp' scrolling='no' width='220' height='270'
                                         frameborder='0'></iframe>
                                     <div id="comments">
-                                        <p>Rishi says: Hi Dad</p>
+                                        {/* <p>Rishi says: Hi Dad</p>
 
                                         <p>Dad says: Your turn!!!</p>
 
-                                        <p>Rishi Says: How about that?</p>
+                                        <p>Rishi Says: How about that?</p> */}
+                                        {this.state.comments.map(comment => (
+                                            <p><b>{comment}</b></p>
+                                        ))}
 
                                     </div>
                                     <label for="comment">Comment:</label>
-                                    <input type="text " className="form-control " id="comment" />
-                                    <button class="btn-go btn-primary">Go</button>
+                                    <input type="text " className="form-control " name="comment" onChange={this.handleInputChange} />
+                                    <button class="btn-go btn-primary"  onClick={this.updateComment}>Go</button>
 
                                 </div>
                             </div>

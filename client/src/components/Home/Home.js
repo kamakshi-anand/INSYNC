@@ -18,7 +18,7 @@ const Home = () => (
                 <h1 className="display-4 header">InSync</h1>
             </div>
 
-            <p className="lead">Your connection to family on earth!!!!!</p>
+            <p className="lead">Your connection to family on earth!!!!</p>
 
             {/* </div> */}
         </div>
