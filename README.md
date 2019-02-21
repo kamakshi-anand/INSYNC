@@ -1,4 +1,23 @@
+a) Problem Identification :	
 
+          Many astronauts suffer from psychological problems, such as depression and loneliness while they are in space. This is because many people are isolated from their loved ones and cannot talk to them in space.  Some people also suffer from mental issues after they get back home.  There have even been cases when the astronauts came back and tried to (some were successful) kill themselves. We are trying to prevent these problems by providing a technical solution to counter their loneliness when they are in space.	
+
+b) Solution:	
+
+      The solution is an app that can do many things that help astronauts from facing psychological problems in space. This is so that astronauts don’t feel like they are out of contact with their families and when they are in space, they will not feel lonely and depressed	
+
+ The solution that:	
+1) Becomes part of the astronaut's day	
+2) Keeps them healthy	
+3) Bring them closer to their family on earth	
+4) Track their Vitals and Nutritional intake	
+
+c) Design:	
+
+ 1) Built on mern stack and all my front end components and routing are all done in react.	
+2) Every page is a separate component and used react router to route traffic between components.	
+3) React bootstrap for front end and I also used MDB library to include Modal/Carousel.	
+4) I built APIs/Routes in node[add workout,load workout,get wearable data] which in turn connects to mongodb/external APIs’ where it        stores data and retrieves data from.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
